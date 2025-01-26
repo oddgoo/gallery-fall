@@ -64,7 +64,7 @@
             class="bg-purple-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-600 active:bg-purple-700 disabled:opacity-50 touch-manipulation"
             disabled={isCorrect}
         >
-            Submit Answer
+            Submit
         </button>
     </div>
     

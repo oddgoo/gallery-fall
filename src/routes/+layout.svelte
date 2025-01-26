@@ -20,7 +20,7 @@
 			<span></span>
 		</div>
 	</button>
-	<h1 class="text-2xl ml-4 text-gray-800 m-0">Gallery Fall</h1>
+	<h1 class="text-2xl ml-4 text-gray-800 m-0">The Gallery's Glitch</h1>
 </header>
 
 {#if isMenuOpen}
@@ -128,7 +128,7 @@
 ></div>
 {/if}
 
-<main class="pt-20 px-4">
+<main class="pt-20 px-4 min-h-screen bg-pattern">
 	<slot />
 </main>
 
@@ -178,5 +178,12 @@
 	/* Optional: Hover effect for the close button */
 	nav button:hover svg {
 		color: #555;
+	}
+
+	/* Add background pattern styling */
+	:global(.bg-pattern) {
+		background-image: url('/images/ui/bg-1.jpg');
+		background-repeat: repeat;
+		background-size: 50%;
 	}
 </style>

@@ -24,7 +24,7 @@
 
 <div class="w-full max-w-3xl mx-auto px-4 py-6 sm:p-8">
     <h2 class="text-3xl sm:text-4xl mb-4 sm:mb-6 text-gray-800">Introduction</h2>
-    <p class="text-base sm:text-lg leading-relaxed mb-6 text-gray-700">Start with these simple puzzles to get the hang of the interface</p>
+    <p class="text-base sm:text-lg leading-relaxed mb-6 text-gray-700">Calibrate your attunement with your hand-scanner with these simple tasks</p>
     
     <PuzzleContainer 
         title="The Sound Chamber"

@@ -223,7 +223,7 @@
             feedback = 'Correct!';
             markPuzzleComplete(id);
         } else {
-            feedback = 'Not quite right. Keep trying!';
+            feedback = 'Not quite right';
         }
     }
 </script>
@@ -277,7 +277,7 @@
                     on:click={checkSolution}
                     class="bg-purple-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-600 active:bg-purple-700 touch-manipulation"
                 >
-                    Check Solution
+                    Submit
                 </button>
             </div>
         {/if}

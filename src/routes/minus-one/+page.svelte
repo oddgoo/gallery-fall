@@ -1,19 +1,61 @@
+<script lang="ts">
+    import NumberPuzzle from '$lib/NumberPuzzle.svelte';
+    import TextPuzzle from '$lib/TextPuzzle.svelte';
+    import ArrangePuzzle from '$lib/ArrangePuzzle.svelte';
+    import PuzzleContainer from '$lib/PuzzleContainer.svelte';
+</script>
+
+
 <div class="max-w-3xl mx-auto p-8">
-    <h2 class="text-4xl mb-6 text-gray-800">Level Minus One</h2>
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">The first underground level houses the museum's contemporary art collection. Strange sounds echo through the dimly lit corridors.</p>
+    <h2 class="text-4xl mb-6 text-gray-800">Minus One</h2>
+    <p class="text-lg leading-relaxed mb-6 text-gray-700">A Layer Deeper</p>
     
-    <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-purple-500">
-        <h3 class="text-2xl mb-4 text-gray-800">The Sound Chamber</h3>
-        <p class="text-gray-700">An acoustic installation that plays different tones based on movement in the room. The frequencies seem to form a pattern.</p>
-    </div>
+    <!-- <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-red-500">
+        <h3 class="text-2xl mb-4 text-gray-800">The Pendulum</h3>
+        <p class="text-gray-700">A massive Foucault pendulum dominates the central atrium. Its swing seems to follow an unusual pattern today.</p>
+    </div> -->
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-purple-500">
-        <h3 class="text-2xl mb-4 text-gray-800">Digital Maze</h3>
-        <p class="text-gray-700">An interactive LED wall creates shifting pathways of light. Visitors report seeing hidden messages in the patterns.</p>
-    </div>
+    <PuzzleContainer 
+    title="Tiny Giants"
+    description=""
+    borderColor="border-purple-500"
+    >
+    <p class="my-2 w-full text-center"> When the giants shrink, so do their tincture. What is this paint?</p>
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-purple-500">
-        <h3 class="text-2xl mb-4 text-gray-800">The Archive</h3>
-        <p class="text-gray-700">A collection of mysterious artifacts, each labeled with cryptic numerical sequences. The filing system defies conventional logic.</p>
-    </div>
+        <TextPuzzle 
+            placeholder="What is the man holding?"
+            correctAnswers={["gold","golden"]}
+            id="b1_giants"
+        />
+    </PuzzleContainer>
+
+    <PuzzleContainer 
+    title="Arte Povera"
+    description=""
+    borderColor="border-green-500"
+>
+    <ArrangePuzzle 
+        prompt="10m"
+        imageUrl="images/b1/arte_povera.jpg"
+        rows=1
+        columns=6
+        id="image-chamber-1"
+    />
+</PuzzleContainer>
+
+
+    <PuzzleContainer 
+    title="Prepared"
+    description=""
+    borderColor="border-purple-500"
+    >
+    <p class="my-2 w-full text-center"> Follow the smell and seek the square window. He holds a tool on his right hand. </p>
+
+        <TextPuzzle 
+            placeholder="What is the man holding?"
+            correctAnswers={["umbrella"]}
+            id="b1_prepared"
+        />
+    </PuzzleContainer>
+
 </div> 

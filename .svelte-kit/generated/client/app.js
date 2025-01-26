@@ -17,7 +17,7 @@ export const server_loads = [];
 
 export const dictionary = {
 		"/": [2],
-		"/entry-gardens": [3],
+		"/gardens": [3],
 		"/general": [4],
 		"/ground": [5],
 		"/introduction": [6],
