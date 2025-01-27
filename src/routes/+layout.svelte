@@ -65,29 +65,11 @@
 		</li>
 		<li>
 			<a
-				href="/general"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
-				on:click={toggleMenu}
-			>
-				General
-			</a>
-		</li>
-		<li>
-			<a
-				href="/entry-gardens"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
-				on:click={toggleMenu}
-			>
-				Entry Gardens
-			</a>
-		</li>
-		<li>
-			<a
 				href="/ground"
 				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
 				on:click={toggleMenu}
 			>
-				Ground
+				Ground Floor
 			</a>
 		</li>
 		<li>
@@ -106,6 +88,15 @@
 				on:click={toggleMenu}
 			>
 				Minus Two
+			</a>
+		</li>
+		<li>
+			<a
+				href="/gardens"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				on:click={toggleMenu}
+			>
+				The Gardens
 			</a>
 		</li>
 		<li>

@@ -33,15 +33,15 @@
     title="Arte Povera"
     description=""
     borderColor="border-green-500"
->
-    <ArrangePuzzle 
-        prompt="10m"
-        imageUrl="images/b1/arte_povera.jpg"
-        rows=1
-        columns=6
-        id="image-chamber-1"
-    />
-</PuzzleContainer>
+    >
+        <ArrangePuzzle 
+            prompt="10m"
+            imageUrl="images/b1/arte_povera.jpg"
+            rows=1
+            columns=6
+            id="b1_povera"
+        />
+    </PuzzleContainer>
 
 
     <PuzzleContainer 

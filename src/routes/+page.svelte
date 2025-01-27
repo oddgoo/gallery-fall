@@ -15,14 +15,14 @@
     </div>
     
     <p class="text-lg leading-relaxed mb-6 text-gray-700">You find yourself at the entrance of a mysterious museum. Your mission, should you choose to accept it, is to uncover the secrets hidden within these walls.</p>
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">Navigate through different areas of the museum using the menu. Each area holds its own puzzles and clues that will help you progress.</p>
+    <p class="text-lg leading-relaxed mb-6 text-gray-700">Remember perspective.</p>
     
     <div class="bg-gray-50 p-8 rounded-lg mt-8">
         <h3 class="text-2xl mb-4 text-gray-800">How to Play</h3>
         <ul class="list-disc pl-6 space-y-2">
-            <li class="text-gray-700">Explore each area carefully</li>
+            <li class="text-gray-700">Explore each area carefully. Everything can be in the puzzles, not just the artworks</li>
             <li class="text-gray-700">Look for hidden clues and patterns</li>
-            <li class="text-gray-700">Solve puzzles to progress</li>
+            <li class="text-gray-700">All the information is within the gallery premises</li>
             <li class="text-gray-700">Take notes of anything suspicious</li>
         </ul>
     </div>
