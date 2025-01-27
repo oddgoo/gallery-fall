@@ -1,9 +1,25 @@
 {
-	"/": [],
-	"/gardens": [],
-	"/ground": [],
-	"/introduction": [],
-	"/minus-one": [],
-	"/minus-two": [],
-	"/the-tank": []
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/gardens": [
+		"src/routes/+layout.ts"
+	],
+	"/ground": [
+		"src/routes/+layout.ts"
+	],
+	"/introduction": [
+		"src/routes/+layout.ts"
+	],
+	"/minus-one": [
+		"src/routes/+layout.ts"
+	],
+	"/minus-two": [
+		"src/routes/+layout.ts"
+	],
+	"/the-tank": [
+		"src/routes/the-tank/+page.ts",
+		"src/routes/+layout.ts"
+	]
 }

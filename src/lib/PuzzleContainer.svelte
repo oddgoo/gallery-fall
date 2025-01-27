@@ -1,9 +1,8 @@
 <script lang="ts">
     import { slide } from 'svelte/transition';
     
-    export let title: string;
-    export let description: string;
-    export let borderColor: string = "border-purple-500";
+    export let title: string = "Untitled";
+    export let description: string = "";
 
     let isExpanded = false;
 
@@ -12,7 +11,7 @@
     }
 </script>
 
-<div class="bg-gray-50 rounded-lg mb-6 border-l-4 {borderColor} overflow-hidden">
+<div class="bg-gray-50 rounded-lg mb-6 border-l-8" style="border-color: rgb(170, 140, 140)" class:overflow-hidden={true}>
     <button
         on:click={toggle}
         class="w-full text-left p-4 sm:p-6 flex items-center justify-between hover:bg-gray-100 transition-colors"

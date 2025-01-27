@@ -1,19 +1,27 @@
-<div class="max-w-3xl mx-auto p-8">
-    <h2 class="text-4xl mb-6 text-gray-800">The Tank</h2>
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">The deepest level of the museum houses a mysterious cylindrical chamber. Few visitors are permitted to enter this area, and those who do report strange phenomena.</p>
-    
-    <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-blue-600">
-        <h3 class="text-2xl mb-4 text-gray-800">The Observation Deck</h3>
-        <p class="text-gray-700">A circular walkway surrounds the central chamber. Through reinforced windows, you can see an otherworldly blue glow emanating from below.</p>
-    </div>
+<script lang="ts">
+    import NumberPuzzle from '$lib/NumberPuzzle.svelte';
+    import TextPuzzle from '$lib/TextPuzzle.svelte';
+    import ArrangePuzzle from '$lib/ArrangePuzzle.svelte';
+    import PuzzleContainer from '$lib/PuzzleContainer.svelte';
+</script>
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-blue-600">
-        <h3 class="text-2xl mb-4 text-gray-800">Control Room</h3>
-        <p class="text-gray-700">Banks of sophisticated equipment monitor unknown parameters. The readings seem impossible - or perhaps they're measuring something beyond conventional science.</p>
-    </div>
+<div class="tank-bg">
+    <div class="max-w-3xl mx-auto p-8">
+        <h2 class="text-4xl mb-6 text-white">The Tank</h2>
+        <p class="text-lg leading-relaxed mb-6 text-white">At the depths. Can't see the way out. Can't see the way in. Stuck in darkness</p>
 
-    <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-red-600 bg-red-50">
-        <h3 class="text-2xl mb-4 text-red-700">The Core</h3>
-        <p class="text-gray-700">Access to the central chamber is strictly prohibited. Security systems beyond anything else in the museum guard whatever lies within.</p>
+        <PuzzleContainer title="The Plan">
+            <p class="my-2 w-full text-center">1010210610<br/>1050___650<br/>1130330730<br/></p>
+            <NumberPuzzle correctAnswers={[250]} id="tank_plan" />
+        </PuzzleContainer>
     </div>
-</div> 
+</div>
+
+<style>
+    .tank-bg {
+        background-image: url('/images/ui/dark-concrete.jpg');
+        background-repeat: repeat;
+        background-size: 50%;
+        min-height: 100vh;
+    }
+</style> 

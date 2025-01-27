@@ -3,7 +3,7 @@
     import { markPuzzleComplete, isPuzzleComplete } from '$lib/stores/progress';
     import { marked } from 'marked';
 
-    export let prompt: string;
+    export let prompt: string = "";
     export let correctAnswers: number[];
     export let id: string;
 

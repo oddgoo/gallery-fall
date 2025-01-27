@@ -6,6 +6,9 @@
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
+
+	// Get the data prop from the page
+	export let data;
 </script>
 
 <header class="fixed top-0 left-0 right-0 flex items-center p-4 bg-white shadow-md z-[60]">
@@ -119,7 +122,10 @@
 ></div>
 {/if}
 
-<main class="pt-20 px-4 min-h-screen bg-pattern">
+<main 
+	class="min-h-screen pt-16 {!data?.background ? 'bg-pattern' : ''}" 
+	style:background={data?.background}
+>
 	<slot />
 </main>
 
@@ -176,5 +182,10 @@
 		background-image: url('/images/ui/bg-1.jpg');
 		background-repeat: repeat;
 		background-size: 50%;
+	}
+
+	:global(body) {
+		margin: 0;
+		padding: 0;
 	}
 </style>
