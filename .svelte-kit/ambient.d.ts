@@ -34,7 +34,7 @@ declare module '$env/static/private' {
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
 	export const DriverData: string;
-	export const EFC_32916: string;
+	export const EFC_11156: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
@@ -127,7 +127,7 @@ declare module '$env/dynamic/private' {
 		COMPUTERNAME: string;
 		ComSpec: string;
 		DriverData: string;
-		EFC_32916: string;
+		EFC_11156: string;
 		HOME: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
