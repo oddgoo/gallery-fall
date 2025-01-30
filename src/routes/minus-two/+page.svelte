@@ -54,6 +54,21 @@
     />
 </PuzzleContainer>
 
+<PuzzleContainer 
+title="Cibachrome"
+puzzleId="b2_cibachrome"
+let:puzzleId
+>
+<img src="images/b2/cibachrome.jpg" class="w-1/2 mx-auto"/>
+<p class="p-3 w-full text-center">In what year was this taken?<br/>
+</p>
+    <NumberPuzzle 
+        {puzzleId}
+        prompt=""
+        correctAnswers={[1992]}
+    />
+</PuzzleContainer>
+
 
 <PuzzleContainer 
 title="Bound"
@@ -82,6 +97,21 @@ let:puzzleId
         prompt="Enter B-1-4: ______"
         placeholder="Identify the gift"
         correctAnswers={["Hip hop","hiphop"]}
+    />
+</PuzzleContainer>
+
+<PuzzleContainer 
+title="Naming of the steps"
+puzzleId="b2_stairs"
+let:puzzleId
+>
+<img src="images/b2/stairs.jpg" class="w-1/2 mx-auto"/>
+<p class="p-3 w-full text-center">These stairs... I know they have a name somehow...<br/>
+</p>
+    <TextPuzzle 
+        {puzzleId}
+        prompt=""
+        correctAnswers={["Patricia Ritchie","patricia ritchie stairs"]}
     />
 </PuzzleContainer>
 

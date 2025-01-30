@@ -25,7 +25,7 @@
 			<span></span>
 		</div>
 	</button>
-	<h1 class="text-2xl ml-4 text-gray-800 m-0 flex-grow">The Gallery's Glitch</h1>
+	<h1 class="text-2xl ml-4 text-gray-800 m-0 flex-grow">Gallery Glitch</h1>
 	<div class="text-gray-600 mr-4 flex items-center">
 		<span class="text-sm font-medium">Progress:</span>
 		<span class="ml-2 bg-gray-100 px-3 py-1 rounded-full text-sm">

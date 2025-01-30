@@ -3,10 +3,10 @@
     import { markPuzzleComplete, isPuzzleComplete } from '$lib/stores/progress';
     import { marked } from 'marked';
 
-    export let prompt: string;
-    export let imageUrl: string;
-    export let rows: number;
-    export let columns: number;
+    export let prompt: string = "";
+    export let imageUrl: string = "";
+    export let rows: number = 2;
+    export let columns: number = 3;
     export let puzzleId: string = "";
     export let id: string = puzzleId; // For backward compatibility
 
@@ -29,6 +29,7 @@
     let touchedElement: HTMLElement | null = null;
     let initialTouchX = 0;
     let initialTouchY = 0;
+    let placeholderElement: HTMLElement | null = null;
     const isComplete = isPuzzleComplete(puzzleId);
 
     $: parsedPrompt = marked(prompt);
@@ -50,9 +51,10 @@
         const pieceWidth = finalWidth / columns;
         const pieceHeight = finalHeight / rows;
 
+        // Create pieces with sequential positions first
         pieces = Array.from({ length: totalPieces }, (_, index) => ({
             id: index,
-            currentPosition: $isComplete ? index : Math.floor(Math.random() * totalPieces),
+            currentPosition: index,
             correctPosition: index,
             style: `
                 width: ${pieceWidth}px;
@@ -63,13 +65,26 @@
             `
         }));
 
-        // Ensure the puzzle is solvable by swapping pairs until we get a valid permutation
+        // Only shuffle if not already complete
         if (!$isComplete) {
-            while (!isValidPermutation(pieces.map(p => p.currentPosition))) {
-                const i = Math.floor(Math.random() * totalPieces);
-                const j = Math.floor(Math.random() * totalPieces);
-                [pieces[i].currentPosition, pieces[j].currentPosition] = [pieces[j].currentPosition, pieces[i].currentPosition];
+            // Create a shuffled array of positions
+            const shuffledPositions = Array.from({ length: totalPieces }, (_, i) => i);
+            for (let i = shuffledPositions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledPositions[i], shuffledPositions[j]] = [shuffledPositions[j], shuffledPositions[i]];
             }
+
+            // Ensure the permutation is valid
+            if (!isValidPermutation(shuffledPositions)) {
+                // If invalid, swap the first two elements to make it valid
+                [shuffledPositions[0], shuffledPositions[1]] = [shuffledPositions[1], shuffledPositions[0]];
+            }
+
+            // Apply shuffled positions
+            pieces = pieces.map((piece, index) => ({
+                ...piece,
+                currentPosition: shuffledPositions[index]
+            }));
         }
 
         if ($isComplete) {
@@ -88,89 +103,131 @@
     }
 
     function handleDragStart(pieceId: number) {
-        draggedPiece = pieceId;
-    }
-
-    function handleDragOver(event: DragEvent) {
-        event.preventDefault();
-    }
-
-    function handleDrop(event: DragEvent, targetPieceId: number) {
-        event.preventDefault();
-        if (draggedPiece === null) return;
-
-        const draggedIndex = pieces.findIndex(p => p.id === draggedPiece);
-        const targetIndex = pieces.findIndex(p => p.id === targetPieceId);
-        
-        if (draggedIndex !== -1 && targetIndex !== -1) {
-            // Swap positions
-            [pieces[draggedIndex].currentPosition, pieces[targetIndex].currentPosition] = 
-            [pieces[targetIndex].currentPosition, pieces[draggedIndex].currentPosition];
-            
-            // Check if puzzle is solved
-            checkSolution();
+        if (!$isComplete) {
+            draggedPiece = pieceId;
         }
-        
+    }
+
+    function handleDragOver(e: DragEvent) {
+        e.preventDefault();
+        if (!$isComplete) {
+            e.dataTransfer!.dropEffect = 'move';
+        }
+    }
+
+    function handleDrop(e: DragEvent, targetPieceId: number) {
+        e.preventDefault();
+        if (draggedPiece === null || draggedPiece === targetPieceId || $isComplete) return;
+        swapPieces(draggedPiece, targetPieceId);
         draggedPiece = null;
     }
 
-    function handleTouchStart(event: TouchEvent, pieceId: number) {
-        event.preventDefault();
-        const touch = event.touches[0];
+    function handleTouchStart(e: TouchEvent, pieceId: number) {
+        if ($isComplete) return;
+        e.preventDefault(); // Prevent default touch behavior
+        
+        // Always get the puzzle piece element, even if we touched a child element
+        const pieceElement = (e.target as HTMLElement).closest('.puzzle-piece') as HTMLElement;
+        if (!pieceElement) return;
+        
+        touchedPiece = pieceId;
+        touchedElement = pieceElement;
+        const touch = e.touches[0];
         touchStartX = touch.clientX;
         touchStartY = touch.clientY;
-        touchedPiece = pieceId;
-        touchDragging = false;
-        touchedElement = event.target as HTMLElement;
-        initialTouchX = touchedElement.offsetLeft;
-        initialTouchY = touchedElement.offsetTop;
+        initialTouchX = touch.clientX;
+        initialTouchY = touch.clientY;
+        
+        // Add visual feedback
+        touchedElement.style.opacity = '0.8';
+        touchedElement.style.transform = 'scale(1.1)';
+        touchedElement.style.zIndex = '100';
     }
 
-    function handleTouchMove(event: TouchEvent) {
-        if (touchedPiece === null || !touchedElement) return;
-        event.preventDefault();
+    function handleTouchMove(e: TouchEvent) {
+        if (touchedPiece === null || touchedElement === null) return;
+        e.preventDefault(); // Prevent scrolling while dragging
         
-        const touch = event.touches[0];
+        const touch = e.touches[0];
         const deltaX = touch.clientX - touchStartX;
         const deltaY = touch.clientY - touchStartY;
         
-        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+        // Update position of dragged element
+        if (touchedElement) {
+            touchedElement.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.1)`;
+            touchedElement.style.zIndex = '100';
             touchDragging = true;
-            touchedElement.style.position = 'absolute';
-            touchedElement.style.zIndex = '1000';
-            touchedElement.style.left = `${initialTouchX + deltaX}px`;
-            touchedElement.style.top = `${initialTouchY + deltaY}px`;
         }
     }
 
-    function handleTouchEnd(event: TouchEvent, targetPieceId: number) {
-        if (touchedPiece === null || !touchDragging) return;
-        event.preventDefault();
-        
-        const draggedIndex = pieces.findIndex(p => p.id === touchedPiece);
-        const targetIndex = pieces.findIndex(p => p.id === targetPieceId);
-        
-        if (draggedIndex !== -1 && targetIndex !== -1) {
-            [pieces[draggedIndex].currentPosition, pieces[targetIndex].currentPosition] = 
-            [pieces[targetIndex].currentPosition, pieces[draggedIndex].currentPosition];
-            
-            checkSolution();
+    function handleTouchEnd(e: TouchEvent, targetPieceId: number) {
+        if (touchedPiece === null || touchedElement === null) {
+            resetTouchState();
+            return;
         }
         
+        const touch = e.changedTouches[0];
+        
+        // Temporarily hide the dragged element to find what's underneath
+        touchedElement.style.visibility = 'hidden';
+        
+        // Find the element under the touch point
+        const elementUnderTouch = document.elementFromPoint(
+            touch.clientX,
+            touch.clientY
+        ) as HTMLElement | null;
+        
+        // Restore visibility
+        touchedElement.style.visibility = 'visible';
+        
+        // Get the piece ID from the element under touch
+        const pieceUnderTouch = elementUnderTouch?.closest('.puzzle-piece');
+        const pieceIdUnderTouch = pieceUnderTouch ? 
+            parseInt(pieceUnderTouch.getAttribute('data-piece-id') || '-1') : -1;
+        
+        // If we found a different piece under the touch point and we've dragged, swap
+        if (touchDragging && pieceIdUnderTouch !== -1 && pieceIdUnderTouch !== touchedPiece) {
+            swapPieces(touchedPiece, pieceIdUnderTouch);
+        }
+        
+        resetTouchState();
+    }
+
+    function handleTouchCancel() {
+        resetTouchState();
+    }
+
+    function resetTouchState() {
         if (touchedElement) {
-            touchedElement.style.position = '';
+            touchedElement.style.opacity = '';
+            touchedElement.style.transform = '';
             touchedElement.style.zIndex = '';
-            touchedElement.style.left = '';
-            touchedElement.style.top = '';
+            touchedElement.style.visibility = '';
         }
-        
         touchedPiece = null;
-        touchDragging = false;
         touchedElement = null;
+        touchDragging = false;
+    }
+
+    function swapPieces(pieceId1: number, pieceId2: number) {
+        const index1 = pieces.findIndex(p => p.id === pieceId1);
+        const index2 = pieces.findIndex(p => p.id === pieceId2);
+        
+        if (index1 === -1 || index2 === -1) return; // Guard against invalid indices
+        
+        const tempPosition = pieces[index1].currentPosition;
+        pieces[index1].currentPosition = pieces[index2].currentPosition;
+        pieces[index2].currentPosition = tempPosition;
+        
+        // Force a re-render of the pieces array
+        pieces = [...pieces];
     }
 
     function checkSolution() {
-        const isSolved = pieces.every(piece => piece.currentPosition === piece.correctPosition);
+        // Sort pieces by current position to check if they match their correct positions
+        const sortedPieces = [...pieces].sort((a, b) => a.currentPosition - b.currentPosition);
+        const isSolved = sortedPieces.every((piece, index) => piece.id === index);
+        
         if (isSolved) {
             feedback = 'Puzzle solved!';
             markPuzzleComplete(puzzleId);
@@ -213,9 +270,24 @@
                         on:touchstart={(e) => handleTouchStart(e, piece.id)}
                         on:touchmove={handleTouchMove}
                         on:touchend={(e) => handleTouchEnd(e, piece.id)}
+                        on:touchcancel={handleTouchCancel}
+                        data-position={piece.currentPosition}
+                        data-piece-id={piece.id}
+                        role="button"
+                        tabindex="0"
                     ></div>
                 {/each}
             </div>
+        </div>
+
+        <div class="flex justify-center mt-4">
+            <button
+                on:click={checkSolution}
+                class="bg-purple-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-600 active:bg-purple-700 disabled:opacity-50 touch-manipulation"
+                disabled={$isComplete}
+            >
+                Submit
+            </button>
         </div>
     {/if}
     
@@ -238,6 +310,7 @@
         @apply grid bg-gray-200;
         width: 100%;
         touch-action: none;
+        position: relative; /* Ensure proper stacking context */
     }
 
     .puzzle-piece {
@@ -271,5 +344,10 @@
 
     .loading-spinner {
         @apply w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mb-2;
+    }
+
+    .puzzle-piece-placeholder {
+        @apply bg-gray-300;
+        opacity: 0.5;
     }
 </style> 
