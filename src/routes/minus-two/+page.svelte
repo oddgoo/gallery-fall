@@ -11,75 +11,86 @@
     
 
 <PuzzleContainer 
-title="The gift"
+    title="The gift"
+    puzzleId="b2_the_gift"
+    let:puzzleId
 >
-<p class="my-2 w-full text-center">I took the gift from Buddha's open hands<br/>
-</p>
+    <p class="my-2 w-full text-center">I took the gift from Buddha's open hands<br/>
+    </p>
     <TextPuzzle 
+        {puzzleId}
         placeholder="What was the gift?"
         correctAnswers={["a stone","stone"]}
-        id="b2_the_gift"
     />
 </PuzzleContainer>
 
 <PuzzleContainer 
-title="Minus Two Arrangement"
-description=""
+    title="Minus Two Arrangement"
+    description=""
+    puzzleId="b2_congregation"
+    let:puzzleId
 >
     <ArrangePuzzle 
+        {puzzleId}
         prompt=""
         imageUrl="images/b2/b2_arrangement.png"
         rows={1}
         columns={8}
-        id="b2_congregation"
     />
 </PuzzleContainer>
 
 <PuzzleContainer 
-title="Pause, Turn, Touch, Reach"
+    title="Pause, Turn, Touch, Reach"
+    puzzleId="b2_pause"
+    let:puzzleId
 >
 <p class="my-2 w-full text-center">In darkness, manipulate the beams into 4 segments and send evidence of your deed to the hosts of keys. <br/>
     They will grant you the key to this lock<br/>
 </p>
     <TextPuzzle 
+        {puzzleId}
         placeholder=""
         correctAnswers={["🌙"]}
-        id="b2_touch"
     />
 </PuzzleContainer>
 
 
 <PuzzleContainer 
 title="Bound"
+puzzleId="b2_bound"
+let:puzzleId
 >
 <p class="my-2 w-full text-center">What animal was bound by the face in the night forest?<br/>
 </p>
     <TextPuzzle 
+        {puzzleId}
         placeholder="Name the animal"
         correctAnswers={["ox","bull","an ox","a bull"]}
-        id="b2_bound"
     />
 </PuzzleContainer>
 
 
 <PuzzleContainer 
 title="v6.15"
+puzzleId="b2_caos_tome"
+let:puzzleId
 >
 <p class="my-2 w-full text-center"> I seek <b class="font-weight-500">Cao's Tome</b>. <br/> I've located the page by cross-referencing the number from Q1, Introduction of this device... The key is in the dialog box.   <br/>
 </p>
     <TextPuzzle 
+        {puzzleId}
         prompt="Enter B-1-4: ______"
         placeholder="Identify the gift"
         correctAnswers={["Hip hop","hiphop"]}
-        id="b2_caos_tome"
     />
 </PuzzleContainer>
 
 
 <PuzzleContainer 
 title="Invisible"
+puzzleId="b2_invisible"
+let:puzzleId
 >
-
     <p class="my-2 w-full text-center">
     Where emptiness takes form, dual specters dwell.<br/>
     Steel fingers grasp at nothing.<br/>
@@ -87,9 +98,9 @@ title="Invisible"
     </p>
 
     <NumberPuzzle 
+        {puzzleId}
         prompt=""
         correctAnswers={[19]}
-        id="b2_invisible"
     />
 </PuzzleContainer>
 

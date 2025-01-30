@@ -29,40 +29,43 @@
     <PuzzleContainer 
         title="The Sound Chamber"
         description="Listen carefully to the sound in this chamber. Each sound corresponds to a number."
-        borderColor="border-purple-500"
+        puzzleId="sound-chamber-1"
+        let:puzzleId
     >
-        <NumberPuzzle 
-            prompt={soundChamberPuzzle.prompt}
-            correctAnswers={soundChamberPuzzle.correctAnswers}
-            id="sound-chamber-1"
-        />
+            <NumberPuzzle 
+                {puzzleId}
+                prompt={soundChamberPuzzle.prompt}
+                correctAnswers={soundChamberPuzzle.correctAnswers}
+            />
     </PuzzleContainer>
 
     <PuzzleContainer 
         title="The Word Chamber"
         description="In this chamber, words appear on the walls. Read them carefully."
-        borderColor="border-blue-500"
+        puzzleId="word-chamber-1"
+        let:puzzleId
     >
         <img src="https://picsum.photos/500/300" alt="Word Chamber" class="w-full rounded-lg mb-4">
-        <TextPuzzle 
-            prompt={wordChamberPuzzle.prompt}
-            correctAnswers={wordChamberPuzzle.correctAnswers}
-            id="word-chamber-1"
-            placeholder="Type the word you see"
-        />
+            <TextPuzzle 
+                {puzzleId}
+                prompt={wordChamberPuzzle.prompt}
+                correctAnswers={wordChamberPuzzle.correctAnswers}
+                placeholder="Type the word you see"
+            />
     </PuzzleContainer>
 
     <PuzzleContainer 
         title="The Image Chamber"
         description="In this chamber, images have been broken into pieces. Arrange them correctly to proceed."
-        borderColor="border-green-500"
+        puzzleId="image-chamber-1"
+        let:puzzleId
     >
-        <ArrangePuzzle 
-            prompt={imagePuzzle.prompt}
-            imageUrl={imagePuzzle.imageUrl}
-            rows={imagePuzzle.rows}
-            columns={imagePuzzle.columns}
-            id="image-chamber-1"
-        />
+            <ArrangePuzzle 
+                {puzzleId}
+                prompt={imagePuzzle.prompt}
+                imageUrl={imagePuzzle.imageUrl}
+                rows={imagePuzzle.rows}
+                columns={imagePuzzle.columns}
+            />
     </PuzzleContainer>
 </div> 

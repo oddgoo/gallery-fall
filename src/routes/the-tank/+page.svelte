@@ -12,48 +12,66 @@
 
         
         <PuzzleContainer 
-        title="Fundamental Reality"
+            title="Fundamental Reality"
+            puzzleId="tank_fundamental"
+            let:puzzleId
         >
             <ArrangePuzzle 
+                {puzzleId}
                 prompt=""
                 imageUrl="images/tank/tank_fundamental.jpg"
                 rows={5}
                 columns={5}
-                id="tank_fundamental"
             />
         </PuzzleContainer>
 
-        <PuzzleContainer title="The Plan">
+        <PuzzleContainer 
+            title="The Plan"
+            puzzleId="tank_plan"
+            let:puzzleId
+        >
             <p class="my-2 w-full text-center">1010210610<br/>1050___650<br/>1130330730<br/></p>
-            <NumberPuzzle correctAnswers={[250]} id="tank_plan" />
-        </PuzzleContainer>
-
-        <PuzzleContainer 
-        title="Emergency"
-        >
-        <p class="my-2 w-full text-center">Assembly Point 3: _______ </p>
-    
-            <TextPuzzle 
-                correctAnswers={["The Domain","Domain"]}
-                id="tank_emergency"
+            <NumberPuzzle 
+                {puzzleId}
+                correctAnswers={[250]} 
             />
         </PuzzleContainer>
 
-        <PuzzleContainer title="Tome of the depths">
-            <p class="my-2 w-full text-center">Seek the tome. Seek its identity</p>
-            <NumberPuzzle correctAnswers={[781741]} prompt="9 ______ 741711" 
-            id="tank_tome" />
+        <PuzzleContainer 
+            title="Emergency"
+            puzzleId="tank_emergency"
+            let:puzzleId
+        >
+            <p class="my-2 w-full text-center">Assembly Point 3: _______ </p>
+            <TextPuzzle 
+                {puzzleId}
+                correctAnswers={["The Domain","Domain"]}
+            />
         </PuzzleContainer>
 
         <PuzzleContainer 
-        title="The Pleiades"
+            title="Tome of the depths"
+            puzzleId="tank_tome"
+            let:puzzleId
         >
-        <p class="my-2 w-full text-center">The Pleiades provides a symbolic cartography for Mesiti’s installation, a gesture to _______ _______ on a global scale </p>
-    
+            <p class="my-2 w-full text-center">Seek the tome. Seek its identity</p>
+            <NumberPuzzle 
+                {puzzleId}
+                correctAnswers={[781741]} 
+                prompt="9 ______ 741711" 
+            />
+        </PuzzleContainer>
+
+        <PuzzleContainer 
+            title="The Pleiades"
+            puzzleId="tank_pleiades"
+            let:puzzleId
+        >
+            <p class="my-2 w-full text-center">The Pleiades provides a symbolic cartography for Mesiti's installation, a gesture to _______ _______ on a global scale </p>
             <TextPuzzle 
+                {puzzleId}
                 prompt="Maybe this passage is not physically here..."
                 correctAnswers={["communal creativity"]}
-                id="tank_pleiades"
             />
         </PuzzleContainer>
 

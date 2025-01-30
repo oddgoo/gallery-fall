@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import { slide } from 'svelte/transition';
+	import { sectionCounts, totalCounts } from '$lib/stores/puzzleCounts';
+
 	let isMenuOpen = false;
 
 	function toggleMenu() {
@@ -23,7 +25,13 @@
 			<span></span>
 		</div>
 	</button>
-	<h1 class="text-2xl ml-4 text-gray-800 m-0">The Gallery's Glitch</h1>
+	<h1 class="text-2xl ml-4 text-gray-800 m-0 flex-grow">The Gallery's Glitch</h1>
+	<div class="text-gray-600 mr-4 flex items-center">
+		<span class="text-sm font-medium">Progress:</span>
+		<span class="ml-2 bg-gray-100 px-3 py-1 rounded-full text-sm">
+			{$totalCounts.completed || 0}/{$totalCounts.total || 0}
+		</span>
+	</div>
 </header>
 
 {#if isMenuOpen}
@@ -60,55 +68,61 @@
 		<li>
 			<a
 				href="/introduction"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				Introduction
+				<span>Introduction</span>
+				<span class="text-sm text-gray-500">{$sectionCounts['introduction']?.completed || 0}/{$sectionCounts['introduction']?.total || 0}</span>
 			</a>
 		</li>
 		<li>
 			<a
 				href="/ground"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				Ground Floor
+				<span>Ground Floor</span>
+				<span class="text-sm text-gray-500">{$sectionCounts['ground']?.completed || 0}/{$sectionCounts['ground']?.total || 0}</span>
 			</a>
 		</li>
 		<li>
 			<a
 				href="/minus-one"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				Minus One
+				<span>Minus One</span>
+				<span class="text-sm text-gray-500">{$sectionCounts['minus-one']?.completed || 0}/{$sectionCounts['minus-one']?.total || 0}</span>
 			</a>
 		</li>
 		<li>
 			<a
 				href="/minus-two"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				Minus Two
+				<span>Minus Two</span>
+				<span class="text-sm text-gray-500">{$sectionCounts['minus-two']?.completed || 0}/{$sectionCounts['minus-two']?.total || 0}</span>
 			</a>
 		</li>
 		<li>
 			<a
 				href="/gardens"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				The Gardens
+				<span>The Gardens</span>
+				<span class="text-sm text-gray-500">{$sectionCounts['gardens']?.completed || 0}/{$sectionCounts['gardens']?.total || 0}</span>
 			</a>
 		</li>
 		<li>
 			<a
 				href="/the-tank"
-				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				The Tank
+				<span>The Tank</span>
+				<span class="text-sm text-gray-500">{$sectionCounts['the-tank']?.completed || 0}/{$sectionCounts['the-tank']?.total || 0}</span>
 			</a>
 		</li>
 	</ul>

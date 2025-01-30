@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 import { browser } from '$app/environment';
 
 // Set this to true to disable progress persistence (for testing)
@@ -34,12 +34,8 @@ export function markPuzzleComplete(puzzleId: string) {
     }));
 }
 
-export function isPuzzleComplete(puzzleId: string): boolean {
-    let result = false;
-    progress.subscribe(value => {
-        result = value[puzzleId]?.completed ?? false;
-    })();
-    return result;
+export function isPuzzleComplete(puzzleId: string) {
+    return derived(progress, $progress => $progress[puzzleId]?.completed ?? false);
 }
 
 // Helper to reset all progress (useful for testing)

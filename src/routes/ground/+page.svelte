@@ -16,124 +16,136 @@
     </div> -->
 
     <PuzzleContainer 
-    title="Naked Bestial"
-    description=""
+        title="Naked Bestial"
+        description=""
+        puzzleId="g_naked_bestial"
+        let:puzzleId
     >
-    <p class="my-2 w-full text-center"> itisbitter_____heanswered </p>
-
+        <p class="my-2 w-full text-center"> itisbitter_____heanswered </p>
         <TextPuzzle 
+            {puzzleId}
             placeholder="Enter the missing word"
             correctAnswers={["bitter"]}
-            id="g_naked_bestial"
         />
     </PuzzleContainer>
 
     <PuzzleContainer 
-    title="My Life is Coloured"
-    description=""
+        title="My Life is Coloured"
+        description=""
+        puzzleId="g_colors"
+        let:puzzleId
     >
         <ArrangePuzzle 
+            {puzzleId}
             prompt="Re-order into reality"
             imageUrl="images/g/colors.jpg"
             rows={1}
             columns={6}
-            id="g_colors"
         />
     </PuzzleContainer>
 
     <PuzzleContainer 
-    title="Cast Thy Gaze"
-    description=""
+        title="Cast Thy Gaze"
+        description=""
+        puzzleId="g_artspace"
+        let:puzzleId
     >
-    <p class="my-2 w-full text-center"> From the middle of the bridge, an eastward gaze into the long distance reveals a signed locale. </p>
-
+        <p class="my-2 w-full text-center"> From the middle of the bridge, an eastward gaze into the long distance reveals a signed locale. </p>
         <TextPuzzle 
+            {puzzleId}
             placeholder="What is this place called?"
             correctAnswers={["ARTSPACE"]}
-            id="g_artspace"
         />
     </PuzzleContainer>
 
-
     <PuzzleContainer 
-    title="Congregation"
-    description=""
+        title="Congregation"
+        description=""
+        puzzleId="g_congregation"
+        let:puzzleId
     >
         <ArrangePuzzle 
+            {puzzleId}
             prompt="Re-order into reality"
             imageUrl="images/g/congregation.png"
             rows={3}
             columns={3}
-            id="g_congregation"
         />
     </PuzzleContainer>
-
 
     <PuzzleContainer 
-    title="Dibirdibi Country"
-    description=""
+        title="Dibirdibi Country"
+        description=""
+        puzzleId="g_dibirdibi"
+        let:puzzleId
     >
-
-    <img src="images/g/dibirdibi.png" alt="" class="w-full rounded-lg mb-4"/>
-
+        <img src="images/g/dibirdibi.png" alt="" class="w-full rounded-lg mb-4"/>
         <NumberPuzzle 
+            {puzzleId}
             prompt="What Year?"
             correctAnswers={[2008]}
-            id="g_dibirdibi"
         />
     </PuzzleContainer>
-
 
     <PuzzleContainer 
         title="Rusted Song"
         description="In the hallway flanked by the blaze snuffers, a number identifies the song of the rusted materials."
+        puzzleId="g_rusted_song"
+        let:puzzleId
     >
         <NumberPuzzle 
+            {puzzleId}
             prompt=""
             correctAnswers={[1010]}
-            id="g_rusted_song"
         />
     </PuzzleContainer>
 
-    
     <PuzzleContainer 
         title="Cozy Corner"
         description="A corner, a cozy corner, a cozy cuved corner. I go in there and count the number of easels I can see"
+        puzzleId="g_corner"
+        let:puzzleId
     >
-
-    <img src="images/g/corner.jpg" alt="" class="w-1/4 mx-auto"/>
-
+        <img src="images/g/corner.jpg" alt="" class="w-1/4 mx-auto"/>
         <NumberPuzzle 
+            {puzzleId}
             prompt=""
             correctAnswers={[12,11]}
-            id="g_corner"
         />
     </PuzzleContainer>
-
 
     <PuzzleContainer 
-    title="Award"
-    description=""
+        title="Award"
+        description=""
+        puzzleId="g_award"
+        let:puzzleId
     >
-    <p class="my-2 w-full text-center"> An award was granted to these premises, but I can't recall the name</p>
-    <img src="images/g/award.jpg" alt="" class="w-1/4 mx-auto"/>
+        <p class="my-2 w-full text-center"> An award was granted to these premises, but I can't recall the name</p>
+        <img src="images/g/award.jpg" alt="" class="w-1/4 mx-auto"/>
 
         <TextPuzzle 
+            {puzzleId}
             placeholder="What was the award's name?"
             correctAnswers={["Suliman", "suliman award", "suliman award for architectural merit"]}
-            id="g_award"
+
         />
     </PuzzleContainer>
 
-    <PuzzleContainer title="The Princess">
+    <PuzzleContainer 
+        title="The Princess"  
+        puzzleId="g_princess"
+        let:puzzleId
+    >
+
         <p class="my-2">_____ and the Swan
         </p>
         <img src="images/g/swan.jpg" alt="" class="w-1/4 mx-auto"/>
         <TextPuzzle
+            {puzzleId}
             prompt=""
             correctAnswers={["Leda"]}
-            id="g_princess"
         />
+
     </PuzzleContainer>
 
 
