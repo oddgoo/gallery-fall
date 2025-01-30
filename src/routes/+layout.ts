@@ -5,3 +5,5 @@ export type LayoutData = {
 export function load(): LayoutData {
     return {};
 } 
+
+export const prerender = true
