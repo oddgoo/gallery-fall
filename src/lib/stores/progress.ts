@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
 // Set this to true to disable progress persistence (for testing)
-export const TESTING_MODE = true;
+export const TESTING_MODE = false;
 
 interface PuzzleProgress {
     [puzzleId: string]: {

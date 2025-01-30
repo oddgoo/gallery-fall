@@ -35,24 +35,25 @@
     
             <TextPuzzle 
                 correctAnswers={["The Domain","Domain"]}
-                id="tank_assembly"
+                id="tank_emergency"
             />
         </PuzzleContainer>
 
         <PuzzleContainer title="Tome of the depths">
             <p class="my-2 w-full text-center">Seek the tome. Seek its identity</p>
-            <NumberPuzzle correctAnswers={[781741]} prompt="9 ______ 741711" id="tank_tome" />
+            <NumberPuzzle correctAnswers={[781741]} prompt="9 ______ 741711" 
+            id="tank_tome" />
         </PuzzleContainer>
 
         <PuzzleContainer 
-        title="Emergency"
+        title="The Pleiades"
         >
         <p class="my-2 w-full text-center">The Pleiades provides a symbolic cartography for Mesiti’s installation, a gesture to _______ _______ on a global scale </p>
     
             <TextPuzzle 
                 prompt="Maybe this passage is not physically here..."
                 correctAnswers={["communal creativity"]}
-                id="tank_assembly"
+                id="tank_pleiades"
             />
         </PuzzleContainer>
 

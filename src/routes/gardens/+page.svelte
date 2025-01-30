@@ -65,7 +65,7 @@
         />
     </PuzzleContainer>
 
-    <h2 class="text-4xl mb-6 text-gray-800">The Gardens</h2>
+    <h2 class="text-4xl mb-6 text-gray-800">Back Gardens</h2>
 
     <PuzzleContainer 
     title="Bloom in the Cosmos"
@@ -81,6 +81,22 @@
     </PuzzleContainer>
 
     <PuzzleContainer 
+    title="See no Evil"
+    >
+        <p>I looked up at the glass window, and I saw an animal looking back at me. </p>
+        <img class="mx-auto w-2/3" src="images/garden/garden_window.png"/>
+
+        <TextPuzzle 
+            prompt="What was the animal?"
+            correctAnswers={["Pig","a pig"]}
+            id="garden_window"
+        />
+    </PuzzleContainer>
+
+
+    <h2 class="text-4xl mb-6 text-gray-800">Front Gardens</h2>
+
+    <PuzzleContainer 
     title="Inscription"
     >
         <img class="mx-auto w-2/3" src="images/garden/pipe.jpg"/>
@@ -92,11 +108,12 @@
     </PuzzleContainer>
 
     <PuzzleContainer 
-    title="Bloom in the Cosmos"
+    title="Pathways"
     >
-        <p>From the broken lift of Woolloomoolloo, I walked back to the courtyard of the giants. </p>
-        <p>Left and Right. Symmetric steps paved the way.</p>
-        <p>I took the steps of the widest path, substracted them from the thinner one and ended up with __ _</p>
+
+    <p>From the fallen lift in the bay of double wool, I sought the giants' square once more.<br/>
+    Left mirrored Right. A path of matching stair strides.<br/>
+    The broader stairway's count, lessened by the narrow one's, reveals the answer: _</p>
 
         <NumberPuzzle
             prompt="Steps"

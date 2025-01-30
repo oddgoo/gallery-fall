@@ -35,6 +35,19 @@ description=""
     />
 </PuzzleContainer>
 
+<PuzzleContainer 
+title="Pause, Turn, Touch, Reach"
+>
+<p class="my-2 w-full text-center">In darkness, manipulate the beams into 4 segments and send evidence of your deed to the hosts of keys. <br/>
+    They will grant you the key to this lock<br/>
+</p>
+    <TextPuzzle 
+        placeholder=""
+        correctAnswers={["🌙"]}
+        id="b2_touch"
+    />
+</PuzzleContainer>
+
 
 <PuzzleContainer 
 title="Bound"
@@ -61,6 +74,25 @@ title="v6.15"
         id="b2_caos_tome"
     />
 </PuzzleContainer>
+
+
+<PuzzleContainer 
+title="Invisible"
+>
+
+    <p class="my-2 w-full text-center">
+    Where emptiness takes form, dual specters dwell.<br/>
+    Steel fingers grasp at nothing.<br/>
+    How many arms hold the void?<br/>
+    </p>
+
+    <NumberPuzzle 
+        prompt=""
+        correctAnswers={[19]}
+        id="b2_invisible"
+    />
+</PuzzleContainer>
+
 
 
 </div> 

@@ -45,7 +45,7 @@
     title="Cast Thy Gaze"
     description=""
     >
-    <p class="my-2 w-full text-center"> From the middle of the bridge, an eastward gaze into the long distance reveals a signed place. </p>
+    <p class="my-2 w-full text-center"> From the middle of the bridge, an eastward gaze into the long distance reveals a signed locale. </p>
 
         <TextPuzzle 
             placeholder="What is this place called?"
@@ -124,6 +124,18 @@
             id="g_award"
         />
     </PuzzleContainer>
+
+    <PuzzleContainer title="The Princess">
+        <p class="my-2">_____ and the Swan
+        </p>
+        <img src="images/g/swan.jpg" alt="" class="w-1/4 mx-auto"/>
+        <TextPuzzle
+            prompt=""
+            correctAnswers={["Leda"]}
+            id="g_princess"
+        />
+    </PuzzleContainer>
+
 
 
 

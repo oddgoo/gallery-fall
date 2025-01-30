@@ -47,7 +47,7 @@
         <TextPuzzle 
             placeholder="What were the guardians?"
             correctAnswers={["dog","dogs"]}
-            id="b1_giants"
+            id="b1_language"
         />
     </PuzzleContainer>
 
@@ -145,7 +145,22 @@
         />
     </PuzzleContainer>
 
-
+    <PuzzleContainer 
+    title="Listening Vessels"
+    >
+    
+        <p class="my-2 w-full text-center">
+        Seek the listening vessels. Face the one that listens. <br/>
+        What colour is it outside and inside?
+        </p>
+    
+        <NumberPuzzle 
+            prompt="_____ and ______"
+            correctAnswers={["purple and white","white and purple","purple white","white purple"]}
+            id="b1_vessels"
+        />
+    </PuzzleContainer>
+    
 
 
 </div> 
