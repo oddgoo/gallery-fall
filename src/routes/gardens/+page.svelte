@@ -12,11 +12,13 @@
 
 		<ProgressionGate page="gardens">
 
-			<p class="mb-7 font-bold">
-				Throughout these unearthly grounds, I witnessed untiring spirits keeping the place and
-				making visitors feel at ease.
+			<p class="mb-7 text-gray-700 leading-relaxed">
+				The garden section flickers between reality and digital decay. Here, in this liminal space, the curator's obsession has awakened something unexpected - the very spirits of the building itself. They manifest as glitches in the system, yet their presence feels ancient, protective. These entities, once mere maintenance protocols, have evolved into something more. They maintain not just the physical space, but the very fabric of reality itself.
 			</p>
 
+			<p class="mb-7 font-bold text-gray-800">
+				To stabilise this section, we must acknowledge these spirits, give them form through recognition. Each name is an anchor, a point of stability in the chaos.
+			</p>
 
 			<PuzzleContainer title="Spirit of Connections" puzzleId="spirit_connection" let:puzzleId>
 				<img class="mx-auto w-2/3" src="images/garden/spirit_connection.jpg" />

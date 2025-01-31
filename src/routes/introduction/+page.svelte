@@ -8,9 +8,11 @@
 <div class="mx-auto w-full max-w-3xl px-4 py-6 sm:p-8">
 	<h2 class="mb-4 text-3xl text-gray-800 sm:mb-6 sm:text-4xl">Introduction</h2>
 	<p class="mb-6 text-base leading-relaxed text-gray-700 sm:text-lg">
-		Anomaly detected. Curator's obsession has destabilized the gallery's attachment to reality.
-		Initiating visitor authentication sequence. Complete these calibration protocols to establish
-		your presence in the system.
+		[EMERGENCY PROTOCOL ACTIVATED] Critical anomaly detected in the gallery's reality structure. The curator's obsession with perfection has torn holes in the fabric of this space. Their endless documentation and categorisation has created a feedback loop, destabilising the boundary between digital and physical realms.
+	</p>
+
+	<p class="mb-6 text-base leading-relaxed text-gray-700 sm:text-lg">
+		Initiating visitor authentication sequence. Your presence has been detected as a potential stabilising force. Complete these calibration protocols to establish your signature in the system. Warning: Failure to properly calibrate may result in temporal displacement.
 	</p>
 
 	<PuzzleContainer

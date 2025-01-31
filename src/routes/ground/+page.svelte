@@ -11,8 +11,9 @@
 
 	<ProgressionGate page="ground">
 		<p class="mb-6 text-lg leading-relaxed text-gray-700">
-			Welcome to the ground floor of the Gallery's Glitch.
+			The first signs of corruption manifest here, where reality begins to fray at the edges. The curator's obsession has left its mark - exhibits flicker between states, their meanings destabilised. Digital artefacts corrupt the  gallery space, leaving behind enigmatic patterns that cry for resolution. Each solved anomaly could be the key to preventing total systemic collapse.
 		</p>
+
 
 		<PuzzleContainer title="Naked Bestial" description="" puzzleId="g_naked_bestial" let:puzzleId>
 			<p class="my-2 w-full text-center">itisbitter_____heanswered</p>
