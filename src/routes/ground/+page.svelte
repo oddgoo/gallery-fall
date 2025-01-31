@@ -86,7 +86,7 @@
 			<TextPuzzle
 				{puzzleId}
 				placeholder="What was the award's name?"
-				correctAnswers={['Suliman', 'suliman award', 'suliman award for architectural merit']}
+				correctAnswers={['Sulman', 'sulman award', 'suliman award for architectural merit']}
 			/>
 		</PuzzleContainer>
 
