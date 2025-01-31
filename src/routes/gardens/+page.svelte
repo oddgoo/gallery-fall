@@ -5,9 +5,8 @@
     import PuzzleContainer from '$lib/PuzzleContainer.svelte';
 </script>
 
+<div class="garden-bg">
 <div class="max-w-3xl mx-auto p-8">
-
-
 
     <h2 class="text-4xl mb-6 text-gray-800">Spirits of the Gallery</h2>
 
@@ -139,6 +138,17 @@
     </PuzzleContainer>
     
 
-
+</div>  
 
 </div> 
+
+<style>
+    .garden-bg {
+        background-image: url('/images/ui/gardens.jpg');
+        background-repeat: repeat;
+        background-size: 50%;
+        min-height: 100vh;
+    }
+</style> 
+
+

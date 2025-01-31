@@ -5,15 +5,14 @@
     import PuzzleContainer from '$lib/PuzzleContainer.svelte';
 </script>
 
-
+<div class="bg">
 <div class="max-w-3xl mx-auto p-8">
-    <h2 class="text-4xl mb-6 text-gray-800">Minus One</h2>
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">A Layer Deeper</p>
-    
-    <!-- <div class="bg-gray-50 p-6 rounded-lg mb-6 border-l-4 border-red-500">
-        <h3 class="text-2xl mb-4 text-gray-800">The Pendulum</h3>
-        <p class="text-gray-700">A massive Foucault pendulum dominates the central atrium. Its swing seems to follow an unusual pattern today.</p>
-    </div> -->
+    <h2 class="text-4xl mb-6 text-gray-800">Minus One - The Descent</h2>
+    <p class="text-lg leading-relaxed mb-6 text-gray-700">
+        [LOG: 02] The corruption seeps deeper. Here the curator began their obsessive documentation, 
+        their digital fingerprints growing erratic. The gallery's subconscious level pulses with 
+        fragmented memories and distorted perceptions.
+    </p>
 
     <PuzzleContainer 
         title="Tinted Memories"
@@ -188,5 +187,15 @@
     </PuzzleContainer>
     
 
-
+</div>
 </div> 
+
+<style>
+    .bg {
+        background-image: url('/images/ui/bg-b1.jpg');
+        background-repeat: repeat;
+        background-size: 50%;
+        min-height: 100vh;
+    }
+</style> 
+

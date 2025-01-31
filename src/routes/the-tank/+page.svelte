@@ -7,8 +7,12 @@
 
 <div class="tank-bg">
     <div class="max-w-3xl mx-auto p-8">
-        <h2 class="text-4xl mb-6 text-white">The Tank</h2>
-        <p class="text-lg leading-relaxed mb-6 text-white">At the depths. Can't see the way out. Can't see the way in. Stuck in darkness</p>
+        <h2 class="text-4xl mb-6 text-white">The Tank - Point of No Return</h2>
+        <p class="text-lg leading-relaxed mb-6 text-white">
+            [FINAL LOG] System collapse imminent. The curator's consciousness has merged with the void.
+            The gallery's deepest level has become a singularity of corrupted data and fractured reality.
+            This is where the glitch began. This is where it must end.
+        </p>
 
         
         <PuzzleContainer 
@@ -80,7 +84,7 @@
 
 <style>
     .tank-bg {
-        background-image: url('/images/ui/dark-concrete.jpg');
+        background-image: url('/images/ui/bg-tank.jpg');
         background-repeat: repeat;
         background-size: 50%;
         min-height: 100vh;

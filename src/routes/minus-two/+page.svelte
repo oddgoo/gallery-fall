@@ -5,10 +5,14 @@
     import PuzzleContainer from '$lib/PuzzleContainer.svelte';
 </script>
 
-<div class="max-w-3xl mx-auto p-8">
-    <h2 class="text-4xl mb-6 text-gray-800">Minus Two</h2>
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">Skirting the depths.</p>
-    
+<div class="bg">
+<div class="max-w-3xl mx-auto p-8 ">
+    <h2 class="text-4xl mb-6 text-white">Minus Two - The Abyss</h2>
+    <p class="text-lg leading-relaxed mb-6 text-white">
+        [LOG: 03] System integrity critical. The curator's logs become increasingly fragmented here. 
+        Their obsession with the gallery's deepest level has corrupted both data and reality. 
+        The digital void yearns to manifest.
+    </p>
 
 <PuzzleContainer 
     title="The gift"
@@ -133,7 +137,16 @@ let:puzzleId
         correctAnswers={[19]}
     />
 </PuzzleContainer>
-
+</div>
 
 
 </div> 
+
+<style>
+    .bg {
+        background-image: url('/images/ui/bg-b2.jpg');
+        background-repeat: repeat;
+        background-size: 50%;
+        min-height: 100vh;
+    }
+</style> 
