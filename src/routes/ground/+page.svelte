@@ -74,7 +74,7 @@
 			let:puzzleId
 		>
 			<img src="images/g/corner.jpg" alt="" class="mx-auto w-1/4" />
-			<NumberPuzzle {puzzleId} prompt="" correctAnswers={[12, 11]} />
+			<NumberPuzzle {puzzleId} prompt="" correctAnswers={[12, 11, 13, 14]} />
 		</PuzzleContainer>
 
 		<PuzzleContainer title="Award" description="" puzzleId="g_award" let:puzzleId>
