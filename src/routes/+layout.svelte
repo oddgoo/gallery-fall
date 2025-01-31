@@ -111,7 +111,7 @@
 				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
 				on:click={toggleMenu}
 			>
-				<span>The Gardens</span>
+				<span>Gardens and Spirits</span>
 				<span class="text-sm text-gray-500">{$sectionCounts['gardens']?.completed || 0}/{$sectionCounts['gardens']?.total || 0}</span>
 			</a>
 		</li>
@@ -123,6 +123,15 @@
 			>
 				<span>The Tank</span>
 				<span class="text-sm text-gray-500">{$sectionCounts['the-tank']?.completed || 0}/{$sectionCounts['the-tank']?.total || 0}</span>
+			</a>
+		</li>
+		<li>
+			<a
+				href="/epilogue"
+				class="block px-6 py-4 text-gray-700 hover:bg-gray-100 transition-colors no-underline flex justify-between items-center"
+				on:click={toggleMenu}
+			>
+				<span>Epilogue</span>
 			</a>
 		</li>
 	</ul>
