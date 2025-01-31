@@ -9,6 +9,7 @@
     export let columns: number = 3;
     export let puzzleId: string = "";
     export let id: string = puzzleId; // For backward compatibility
+    export let cooldownTime: number = 10;
 
     interface PuzzlePiece {
         id: number;
@@ -19,6 +20,8 @@
 
     let pieces: PuzzlePiece[] = [];
     let feedback = '';
+    let cooldownRemaining = 0;
+    let cooldownInterval: number;
     let draggedPiece: number | null = null;
     let imageLoaded = false;
     let imageElement: HTMLImageElement;
@@ -223,6 +226,17 @@
         pieces = [...pieces];
     }
 
+    function startCooldown() {
+        cooldownRemaining = cooldownTime;
+        if (cooldownInterval) clearInterval(cooldownInterval);
+        cooldownInterval = setInterval(() => {
+            cooldownRemaining--;
+            if (cooldownRemaining <= 0) {
+                clearInterval(cooldownInterval);
+            }
+        }, 1000);
+    }
+
     function checkSolution() {
         // Sort pieces by current position to check if they match their correct positions
         const sortedPieces = [...pieces].sort((a, b) => a.currentPosition - b.currentPosition);
@@ -233,8 +247,18 @@
             markPuzzleComplete(puzzleId);
         } else {
             feedback = 'Not quite right';
+            startCooldown();
         }
     }
+
+    onMount(() => {
+        if ($isComplete) {
+            feedback = 'Puzzle solved!';
+        }
+        return () => {
+            if (cooldownInterval) clearInterval(cooldownInterval);
+        };
+    });
 </script>
 
 <div class="puzzle-container">
@@ -283,10 +307,20 @@
         <div class="flex justify-center mt-4">
             <button
                 on:click={checkSolution}
-                class="bg-purple-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-600 active:bg-purple-700 disabled:opacity-50 touch-manipulation"
-                disabled={$isComplete}
+                class="bg-purple-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-purple-600 active:bg-purple-700 disabled:opacity-50 touch-manipulation transition-all duration-200 relative overflow-hidden {cooldownRemaining > 0 ? 'cursor-not-allowed' : ''}"
+                disabled={$isComplete || cooldownRemaining > 0}
             >
-                Submit
+                {#if cooldownRemaining > 0}
+                    Wait {cooldownRemaining}s
+                {:else}
+                    Submit
+                {/if}
+                {#if cooldownRemaining > 0}
+                    <div 
+                        class="absolute bottom-0 left-0 h-1 bg-white/30"
+                        style="width: {(cooldownRemaining / cooldownTime) * 100}%"
+                    ></div>
+                {/if}
             </button>
         </div>
     {/if}
