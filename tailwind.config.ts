@@ -5,7 +5,11 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				outfit: ['Outfit', 'sans-serif']
+			}
+		}
 	},
 
 	plugins: [typography]

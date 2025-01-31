@@ -4,6 +4,7 @@
 	import ArrangePuzzle from '$lib/ArrangePuzzle.svelte';
 	import PuzzleContainer from '$lib/PuzzleContainer.svelte';
 	import ProgressionGate from '$lib/ProgressionGate.svelte';
+	import GlitchText from '$lib/GlitchText.svelte';
 </script>
 
 <div class="tank-bg">
@@ -13,9 +14,9 @@
 		<ProgressionGate page="the-tank">
 			<p class="mb-6 text-lg leading-relaxed text-white">
 				[FINAL LOG] System collapse imminent. The curator's consciousness has merged with the void.
-				The gallery's deepest level has become a singularity of corrupted data and fractured
-				reality. This is where the glitch began. This is where it must end.
+				The gallery's deepest level has become a singularity of <GlitchText text="corrupted reality" />  This is where the glitch began. This is where it must end.
 			</p>
+
 
 			<PuzzleContainer title="Fundamental Reality" puzzleId="tank_fundamental" let:puzzleId>
 				<ArrangePuzzle

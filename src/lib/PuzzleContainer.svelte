@@ -21,9 +21,10 @@
         on:click={toggle}
         class="w-full text-left p-4 sm:p-6 flex items-center justify-between hover:bg-gray-100 transition-colors"
     >
-        <h3 class="text-xl sm:text-2xl text-gray-800">{title}</h3>
+        <h3 class="text-xl sm:text-2xl text-gray-800 font-outfit">{title}</h3>
         <div class="flex items-center ml-4 gap-2">
             {#if $isComplete}
+
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>

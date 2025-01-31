@@ -4,6 +4,7 @@
 	import ArrangePuzzle from '$lib/ArrangePuzzle.svelte';
 	import PuzzleContainer from '$lib/PuzzleContainer.svelte';
 	import ProgressionGate from '$lib/ProgressionGate.svelte';
+	import GlitchText from '$lib/GlitchText.svelte';
 </script>
 
 <div class="garden-bg">
