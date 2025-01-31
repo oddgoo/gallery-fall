@@ -42,7 +42,7 @@
 				/>
 			</PuzzleContainer>
 
-			<PuzzleContainer title="Pause, Turn, Touch, Reach" puzzleId="b2_pause" let:puzzleId>
+			<PuzzleContainer title="Pause, Turn, Touch, Reach" puzzleId="b2_touch" let:puzzleId>
 				<p class="my-2 w-full text-center">
 					In darkness, manipulate the beams into 4 segments and send evidence of your deed to the
 					hosts of keys. <br />

@@ -19,12 +19,18 @@
 		</div>
 		<p class="text-purple-900">
 			This interface has manifested from the gallery's  <GlitchText text="destabilised" /> network - a bridge between your reality and the anomalous space. Its protocols resonate with the glitches, allowing controlled interaction with the corrupted exhibits.
+
+
 		</p>
+
 	</div>
+
+	<p class="text-lg leading-relaxed mb-6 text-gray-700">Each puzzle holds a piece of the corruption,  a chance to stabilise the anomalies.</p>
+	
 
 	<div class="bg-gray-600 p-4 my-6 rounded-lg font-mono text-sm">
 		<p class="my-2 text-base leading-relaxed text-green-300 ">
-			Initiating visitor authentication sequence... <br/> Your presence has been detected as a potential stabilising force. Complete these calibration protocols to establish your signature in the system. Warning: Failure to properly calibrate may result in temporal displacement.
+			Initiating visitor authentication sequence... <br/> Your presence has been detected as a potential stabilising force. Complete these calibration protocols to establish your signature in the system. <span class="text-red-400">Warning: Failure to properly calibrate may result in temporal displacement.</span>
 		</p>
 
 	</div>

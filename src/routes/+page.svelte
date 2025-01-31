@@ -15,9 +15,9 @@
         <h2 class="text-4xl text-gray-800">Welcome to the <GlitchText text="Fractured" /> Gallery</h2>
     </div>
     
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">The air crackles with static as you approach the museum's entrance. Something is wrong. The curator's obsession with perfection has torn a rift in reality itself, creating critical pockets of <GlitchText text="entropy" /> throughout the gallery.  Time is running out, and the void grows hungry...</p>
-
-    <p class="text-lg leading-relaxed mb-6 text-gray-700">Each puzzle holds a piece of the corruption,  a chance to stabilise the anomalies.</p>
+    <p class="text-lg leading-relaxed mb-6 text-gray-700">The air crackles with static as you approach the museum's entrance. Something is wrong. The curator's obsession with perfection has torn a rift in reality itself, creating critical pockets of <GlitchText text="entropy" /> throughout the gallery. <br/>
+        Time is running out, and the void grows hungry...
+    </p>
     
 
     <div class="flex justify-center my-5">

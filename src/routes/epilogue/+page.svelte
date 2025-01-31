@@ -13,11 +13,9 @@
 	<ProgressionGate page="epilogue">
 
 		<div class="prose prose-lg">
-			<p>The digital entropy dissipates like morning fog, reality knitting itself back together. The curator's obsession, my obsession, once a tear in the fabric of space-time, has been transformed into something beautiful. In my relentless pursuit of perfection, of cataloguing every detail, I had become both the Keeper of Keys and the source of the anomaly.</p>
+			<p>The digital entropy dissipates like morning fog, reality knitting itself back together. The curator's obsession, <b>my obsession</b>, once a tear in the fabric of space-time, has been transformed into something <GlitchText text="beautiful" />. In my relentless pursuit of perfection, of cataloguing every detail, I had become both the Keeper of Keys and the source of the anomaly.</p>
             
             <p>But you, my friends, your presence here today has done more than solve puzzles, you've reminded me of what matters most. Each shared moment, each laugh, each connection has helped anchor me back to reality. The exhibits shine with renewed purpose, no longer trapped in my fractured vision, but enriched by the joy of sharing them with others.</p>
-            
-            <p>Perhaps the greatest glitch was thinking I needed to curate this space alone. What better way to celebrate another year of existence than by letting others into my carefully constructed world, and finding it more beautiful for being shared?</p>
 
             <p class="text-sm italic mt-8">Thank you for being here on my birthday, for helping me find my way back through the static. Your friendship today has made all the difference. 💝</p>
 		</div>

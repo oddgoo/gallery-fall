@@ -79,14 +79,15 @@
 
 			<PuzzleContainer
 				title="Shapes of Utility"
-				description="Seek this angle"
+				description=""
 				puzzleId="b1_shapes"
 				let:puzzleId
 			>
-				<p class="my-2">Face the eight times abled creature and recombine the shapes of utility</p>
+			    <img src="images/b1/b1_shapes.jpg" class="mx-auto w-3/4" />
+				<p class="my-2">Face the eight times abled creature. Take a few steps back and recombine the shapes of utility:</p>
 				<ArrangePuzzle
 					{puzzleId}
-					prompt="Face the eight times abled creature and recombine the shapes of utility"
+					prompt=""
 					imageUrl="images/b1/shapes.png"
 					rows={1}
 					columns={6}
