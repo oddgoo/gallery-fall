@@ -1,9 +1,20 @@
-# sv
-
-GALLERY GLITCH
+# GALLERY GLITCH
 
 <img src="static/meta/screenshot.png" alt="Gallery Glitch screenshot" width="800">
 
+
+I made a scavenger hunt for my birthday that took place at the Art Gallery of NSW.
+
+The game happened in early Feb, 2025, and involves not only the artworks, but observing and playing with the amazing space and architecture.
+
+It can still be played and accessed at:
+https://gallery-fall.vercel.app/
+
+Tho I estimate that every week, as the gallery changes, 1 or 2 puzzles will stop working.
+
+PS: There is nothing that requires breaching the actual Museum rules :P
+
+<img src="static/meta/players.png" alt="Gallery Glitch screenshot" width="500">
 
 ## Technical details
 
