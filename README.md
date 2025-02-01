@@ -1,6 +1,6 @@
 # GALLERY GLITCH
 
-![Gallery Glitch screenshot](/static/meta/screenshot.png?raw=true)
+![Gallery Glitch screenshot](/static/images/meta/screenshot.png?raw=true)
 
 I made a scavenger hunt for my birthday that took place at the Art Gallery of NSW.
 
@@ -13,7 +13,7 @@ Tho I estimate that every week, as the gallery changes, 1 or 2 puzzles will stop
 
 PS: There is nothing that requires breaching the actual Museum rules :P
 
-![Gallery Glitch screenshot](/static/meta/players.png?raw=true)
+![Players](/static/images/meta/players.png?raw=true)
 
 ## Technical details
 
