@@ -94,15 +94,6 @@
 				/>
 			</PuzzleContainer>
 
-			<PuzzleContainer title="Invisible" puzzleId="b2_invisible" let:puzzleId>
-				<p class="my-2 w-full text-center">
-					Where emptiness takes form, dual specters dwell.<br />
-					Steel fingers grasp at nothing.<br />
-					How many arms hold the void?<br />
-				</p>
-
-				<NumberPuzzle {puzzleId} prompt="" correctAnswers={[19]} />
-			</PuzzleContainer>
 		</ProgressionGate>
 	</div>
 </div>
