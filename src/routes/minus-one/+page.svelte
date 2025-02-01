@@ -23,6 +23,9 @@
 					In the room of coloured windows, Capture a tinted photograph of yourself. <br />
 					Send it to the hosts of keys. They will grant you the key to this lock
 				</p>
+
+				<p class="italic my-2 text-center w-full"> meta note: since the host of keys is probably not there, the passkey is: ❤️</p>
+				
 				<TextPuzzle {puzzleId} placeholder="What is the passkey?" correctAnswers={['<3', '❤️']} />
 			</PuzzleContainer>
 

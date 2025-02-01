@@ -19,8 +19,6 @@
 		</div>
 		<p class="text-purple-900">
 			This interface has manifested from the gallery's  <GlitchText text="destabilised" /> network - a bridge between your reality and the anomalous space. Its protocols resonate with the glitches, allowing controlled interaction with the corrupted exhibits.
-
-
 		</p>
 
 	</div>
@@ -34,22 +32,6 @@
 		</p>
 
 	</div>
-
-	<PuzzleContainer
-		title="Cosmic Laps"
-		description="Time signatures must align for safe passage."
-		puzzleId="intro_age"
-		let:puzzleId
-	>
-		<p>
-			The Keeper of Keys circles the sun. Their orbits marks our path. How many cycles complete? How many laps around the sun has the keeper of keys completed?
-		</p>
-		<NumberPuzzle
-			{puzzleId}
-			prompt=""
-			correctAnswers={[36]}
-		/>
-	</PuzzleContainer>
 
 	<PuzzleContainer title="Deity" puzzleId="intro_text" let:puzzleId>
 		<p class="mb-4 text-gray-700">

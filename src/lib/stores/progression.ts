@@ -18,7 +18,7 @@ export const progression = derived(
         }
         
         return {
-            ground: $sectionCounts['introduction']?.completed >= 2,
+            ground: $sectionCounts['introduction']?.completed >= 1,
             'minus-one': $sectionCounts['ground']?.completed >= 4,
             'minus-two': $sectionCounts['minus-one']?.completed >= 5,
             gardens: $sectionCounts['minus-two']?.completed >= 3,

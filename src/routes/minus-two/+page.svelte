@@ -48,6 +48,9 @@
 					hosts of keys. <br />
 					They will grant you the key to this lock<br />
 				</p>
+
+				<p class="italic my-2 text-center w-full"> meta note: since the host of keys is probably not there, the passkey is: 🌙</p>
+				
 				<TextPuzzle {puzzleId} placeholder="" correctAnswers={['🌙']} />
 			</PuzzleContainer>
 
