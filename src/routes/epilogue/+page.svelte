@@ -20,6 +20,5 @@
             <p class="text-sm italic mt-8">Thank you for being here on my birthday, for helping me find my way back through the static. Your friendship today has made all the difference. 💝</p>
 		</div>
 
-		<img src="images/epilogue/love.jpg" class="mx-auto w-1/2 my-10" />
 	</ProgressionGate>
 </div>
