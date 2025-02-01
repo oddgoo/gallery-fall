@@ -27,3 +27,5 @@ pnpm install
 pnpm run dev
 pnpm build
 ```
+
+Note: As this was done rather hastily and with a fair amount of AI help, a lot of the code itself may be unnecesarily complex.
