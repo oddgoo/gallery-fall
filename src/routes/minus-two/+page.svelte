@@ -74,7 +74,7 @@
 			<PuzzleContainer title="v6.15" puzzleId="b2_caos_tome" let:puzzleId>
 				<p class="my-2 w-full text-center">
 					I seek <b class="font-weight-500">Cao's Tome</b>. <br /> I've located the page by
-					cross-referencing the number from Q1, Introduction of this device... The key is in the
+					cross-referencing the number from Q1, Introduction of this device (36)... The key is in the
 					dialog box. <br />
 				</p>
 				<TextPuzzle
