@@ -2,7 +2,7 @@
 
 ![Gallery Glitch screenshot](/static/images/meta/screenshot.png?raw=true)
 
-I made a scavenger hunt for my birthday that took place at the Art Gallery of NSW (Naala Badu, North building).
+We made a "situated game" for my birthday, taking place at the Art Gallery of NSW (Naala Badu, North building).
 
 The game happened in early Feb, 2025, and involves not only the artworks, but observing and playing with the amazing space and architecture.
 
